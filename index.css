@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.clock {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  border: 2px black solid;
+  border-radius: 9999px;
+  background-color: aliceblue;
+}
+
+.common {
+  position: absolute;
+  left: 50%;
+  width: 2px;
+  height: 398px;
+  border-style: solid;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-top-width: 20px;
+  border-bottom-width: 20px;
+  border-color: black;
+}
+
+.common::before {
+  font-size: 20px;
+  position: absolute;
+  left: -4px;
+  bottom: 5px;
+}
+
+.common::after {
+  font-size: 20px;
+  position: absolute;
+  top: 5px;
+  left: -2px;
+}
+
+.first {
+  transform: rotate(30deg);
+}
+
+.first::after {
+  content: '1';
+  transform: rotate(-30deg);
+}
+
+.first::before {
+  content: '7';
+  transform: rotate(-30deg);
+}
+
+.second {
+  transform: rotate(60deg);
+}
+
+.second::after {
+  content: '2';
+  transform: rotate(-60deg);
+
+}
+
+.second::before {
+  content: '8';
+  transform: rotate(-60deg);
+
+}
+
+.third {
+  transform: rotate(90deg);
+}
+
+.third::after {
+  content: '3';
+  transform: rotate(-90deg);
+
+}
+
+.third::before {
+  content: '9';
+  transform: rotate(-90deg);
+
+}
+
+.fourth {
+  transform: rotate(120deg);
+}
+
+.fourth::after {
+  content: '4';
+  transform: rotate(-120deg);
+
+}
+
+.fourth::before {
+  content: '10';
+  left: -10px;
+  transform: rotate(-120deg);
+
+}
+
+.fifth {
+  transform: rotate(150deg);
+}
+
+.fifth::after {
+  content: '5';
+  transform: rotate(-150deg);
+
+}
+
+.fifth::before {
+  content: '11';
+  left: -11px;
+  transform: rotate(-150deg);
+}
+
+.sixth::after {
+  content: '12';
+  left: -8px;
+}
+
+.sixth::before {
+  content: '6'
+}
+
+.hands-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.pin {
+  z-index: 3;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 10000px;
+  background-color: brown;
+}
+
+.hours {
+  position: absolute;
+  width: 8px;
+  height: 120px;
+  z-index: 1;
+  translate: 0 -50%;
+  transform-origin: bottom;
+  background-color: aqua;
+}
+
+.minutes {
+  position: absolute;
+  width: 5px;
+  height: 140px;
+  z-index: 2;
+  transform-origin: bottom;
+  translate: 0 -50%;
+  background-color: rebeccapurple;
+}
+
+.seconds {
+  position: absolute;
+  width: 1px;
+  height: 140px;
+  z-index: 2;
+  transform-origin: bottom;
+  translate: 0 -50%;
+  background-color: grey;
+}
+
